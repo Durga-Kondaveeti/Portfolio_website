@@ -82,7 +82,7 @@ export const projects = [
   },
   {
     title: "CLIP-based Image Understanding",
-    img: "images/CLIP_image_sort.png",
+    img: "images/CLIP_Image_sort.png",
     tech: ["PyTorch", "ViT-B/32", "Mask R-CNN"],
     desc: "Implemented text-to-image retrieval and zero-shot classification.",
     link: "https://github.com/Durga-Kondaveeti",
