@@ -4,7 +4,7 @@ date: 2025-12-30
 tags: [Regex, Algorithms, Debugging, Computer Science]
 ---
 
-![Cover image showing a regex timeline or engine abstract concept](../../public/images/Regex_project.png "Visualizing Regex Engine Flow")
+![Cover image showing a regex timeline or engine abstract concept](images/Regex_project.png "Visualizing Regex Engine Flow")
 *Every developer uses regex, but few have seen the engine in motion.*
 
 Regular Expressions (Regex) are one of the most powerful tools in a developer's arsenal. We write a pattern, feed it a string, and hope for a match. But what actually happens under the hood?
@@ -32,7 +32,7 @@ The engine starts with `a*`. The `*` quantifier is **greedy**. It wants to consu
 
 **Current State:** The engine has consumed `aaa`. It records this state so it can come back (backtrack) later if needed, but for now, it feels confident.
 
-![Screenshot showing a* highlighting aaa in the debugger](../../public/images/regex_project_output1.png "Step 1: a* greedily consumes aaa")
+![Screenshot showing a* highlighting aaa in the debugger](images/regex_project_output1.png "Step 1: a* greedily consumes aaa")
 *Visualizing Step 1: The engine greedily consumes the first half of the string.*
 
 ### Step 2: The Handoff to `b+`
@@ -42,7 +42,7 @@ The cursor is currently sitting at the first `b` of the string `aaabb`.
 * The engine checks if the character `b` satisfies the pattern `b+`.
 * **Match!** It consumes the first `b`.
 
-![Screenshot showing the transition from a to b](../../public/images/regex_project_output2.png "Step 2: The engine hands control to b+")
+![Screenshot showing the transition from a to b](images/regex_project_output2.png "Step 2: The engine hands control to b+")
 *Visualizing Step 2: The pattern advances to the next token.*
 
 ### Step 3: The Greedy `b+` Finish
@@ -53,7 +53,7 @@ Just like before, `b+` is greedy. It continues to look for more `b`s.
 
 Since `b+` requires "one or more" and it has found two, the condition is satisfied.
 
-![Screenshot showing b+ highlighting the final bb](../../public/images/regex_project_output3.png "Step 3: b+ consumes the remaining bb")
+![Screenshot showing b+ highlighting the final bb](images/regex_project_output3.png "Step 3: b+ consumes the remaining bb")
 *Visualizing Step 3: The match is complete.*
 
 ### Final Output
@@ -64,7 +64,7 @@ The engine has successfully navigated the string from start to finish.
 
 Because the "greedy" path worked on the first try, the engine didn't need to backtrack—but it was ready to!
 
-![Final screenshot showing the full match success](../../public/images/regex_project_output4.png "Final Successful Match")
+![Final screenshot showing the full match success](images/regex_project_output4.png "Final Successful Match")
 
 ## Visualizing the Time Travel
 

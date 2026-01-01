@@ -66,7 +66,7 @@ export const skills = [
 export const projects = [
   {
     title: "Regex Backtracking Visualizer",
-    img: "../public/images/Regex_project.png",
+    img: "images/Regex_project.png",
     tech: ["React", "TypeScript", "AST Parsing"],
     desc: "Custom engine to visualize recursive backtracking and greedy matching in real-time.",
     link: "https://durga-kondaveeti.github.io/Regex-Time-Travel-Debugger/",
@@ -74,7 +74,7 @@ export const projects = [
   },
   {
     title: "NLU Code Explainer LLM",
-    img: "../public/images/code_explainator.png",
+    img: "images/code_explainator.png",
     tech: ["Python", "Llama 2", "QLORA"],
     desc: "Fine-tuned LLM to generate human-readable code explanations with 20% higher accuracy.",
     link: "https://github.com/Durga-Kondaveeti",
@@ -82,7 +82,7 @@ export const projects = [
   },
   {
     title: "CLIP-based Image Understanding",
-    img: "../public/images/CLIP_image_sort.png",
+    img: "images/CLIP_image_sort.png",
     tech: ["PyTorch", "ViT-B/32", "Mask R-CNN"],
     desc: "Implemented text-to-image retrieval and zero-shot classification.",
     link: "https://github.com/Durga-Kondaveeti",
