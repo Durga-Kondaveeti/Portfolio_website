@@ -66,7 +66,7 @@ export const skills = [
 export const projects = [
     {
     title: "SaaS Dashboard for Job Tracker",
-    img: "public/images/Job_tracker_Logo.png",
+    img: "images/Job_tracker_Logo.png",
     tech: ["Go", "React", "GCP", "Gemini", "TypeScript", "AST Parsing", "Firebase"],
     desc: "Gemini Integrated a full-stack SaaS dashboard enabling users to track job applications, schedule interviews, and manage with real-time updates from gmail.",
     link: "https://github.com/Durga-Kondaveeti/Job-tracker",
