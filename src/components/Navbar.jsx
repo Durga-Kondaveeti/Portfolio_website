@@ -49,7 +49,7 @@ const navLinks = [
     }`}>
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
         <Link to="/" className="text-2xl font-bold text-primary tracking-tighter">
-          DK.
+          DK
         </Link>
 
         {/* Desktop Menu */}

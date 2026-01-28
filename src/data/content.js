@@ -16,8 +16,8 @@ export const personalInfo = {
 
 export const aboutPersonas = {
   recruiter: "Master's student in Computer Engineering at GMU (Exp. May 2026) with professional experience as an SDE at Paytm. Tech stack includes React, Python, Node.js, and AWS. Proven track record of optimizing web performance (reducing load times by ~45%) and designing CI/CD pipelines.",
-  manager: "I focus on reliability and scalability. At Paytm, I didn't just write code; I architected reusable component libraries and established Jest testing protocols that reduced regression bugs by 25%. I'm experienced in migrating legacy services to AWS and optimizing backend logic for O(n) performance.",
-  client: "I build fast, intuitive digital products. I specialize in turning complex data—like Regex patterns or financial transactions—into user-friendly interfaces. My goal is to deliver software that works seamlessly, loads instantly, and solves real user problems."
+  manager: "I focus on reliability and scalability. At Paytm, I didn't just write code, I architected reusable component libraries and established Jest testing protocols that reduced regression bugs by 25%. I'm experienced in migrating legacy services to AWS and optimizing backend logic for O(n) performance.",
+  client: "I build fast, intuitive digital products. I specialize in turning complex data like Regex patterns or financial transactions into user-friendly interfaces. My goal is to deliver software that works seamlessly, loads instantly, and solves real user problems."
 };
 
 export const experience = [
@@ -58,24 +58,33 @@ export const education = [
 
 export const skills = [
   { category: "Languages", items: ["Python", "Java", "C++", "JavaScript", "TypeScript", "SQL"] },
-  { category: "Frontend", items: ["React", "React Native", "Tailwind"] },
+  { category: "Frontend", items: ["React", "React Native", "Tailwindcss"] },
   { category: "Backend", items: ["Node.js", "Django", "Spring Boot", "GraphQL"] },
   { category: "Cloud/DevOps", items: ["AWS (Lambda, EC2)", "Docker", "Kubernetes", "Terraform", "Jenkins"] }
 ];
 
 export const projects = [
+    {
+    title: "SaaS Dashboard for Job Tracker",
+    img: "public/images/Job_tracker_Logo.png",
+    tech: ["Go", "React", "GCP", "Gemini", "TypeScript", "AST Parsing", "Firebase"],
+    desc: "Gemini Integrated a full-stack SaaS dashboard enabling users to track job applications, schedule interviews, and manage with real-time updates from gmail.",
+    link: "https://github.com/Durga-Kondaveeti/Job-tracker",
+    type: "SaaS",
+    isLogo: true
+  },
   {
     title: "Regex Backtracking Visualizer",
     img: "images/Regex_project.png",
-    tech: ["React", "TypeScript", "AST Parsing"],
-    desc: "Custom engine to visualize recursive backtracking and greedy matching in real-time.",
+    tech: ["React", "TypeScript", "AST Parsing", "Backtracking Algorithms"],
+    desc: "interactive Regex visualization tool using React and TypeScript to simulate recursive backtracking and Depth-First Search (DFS), providing real-time state analysis of pattern matching execution.",
     link: "https://durga-kondaveeti.github.io/Regex-Time-Travel-Debugger/",
     type: "Web App"
   },
   {
     title: "NLU Code Explainer LLM",
     img: "images/code_explainator.png",
-    tech: ["Python", "Llama 2", "QLORA"],
+    tech: ["Python", "Llama 2", "QLORA", "PEFT"],
     desc: "Fine-tuned LLM to generate human-readable code explanations with 20% higher accuracy.",
     link: "https://github.com/Durga-Kondaveeti",
     type: "AI/ML"

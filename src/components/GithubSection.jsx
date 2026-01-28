@@ -5,7 +5,6 @@ const GithubSection = () => {
   const [stats, setStats] = useState(null);
   const [repos, setRepos] = useState([]);
   
-  // Custom theme color for the graph (ma tches your blue accent)
   const graphColor = "3b82f6"; 
 
   useEffect(() => {
@@ -31,7 +30,6 @@ const GithubSection = () => {
     <section id="github" className="py-20 bg-white border-t border-gray-100">
       <div className="max-w-6xl mx-auto px-6">
         
-        {/* Header */}
         <div className="text-center mb-12">
           <div className="inline-block p-3 bg-slate-100 rounded-full mb-4 text-slate-900">
             <Github size={32} />
@@ -39,7 +37,7 @@ const GithubSection = () => {
           <h2 className="text-3xl font-bold text-slate-900">Open Source</h2>
         </div>
 
-        {/* 1. The Contribution Graph (Added Back) */}
+        {/* Contribution Graph */}
         <div className="mb-16 flex justify-center">
           <div className="p-4 border border-slate-200 rounded-xl overflow-hidden bg-white shadow-sm hover:shadow-md transition-shadow">
              <img 
@@ -50,7 +48,7 @@ const GithubSection = () => {
           </div>
         </div>
 
-        {/* 2. Stats Grid */}
+        {/* Stats Grid */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
           <StatCard label="Public Repos" value={stats?.public_repos} />
           <StatCard label="Followers" value={stats?.followers} />
@@ -58,7 +56,7 @@ const GithubSection = () => {
           <StatCard label="Total Gists" value={stats?.public_gists} />
         </div>
 
-        {/* 3. Repositories Grid */}
+        {/* Repositories Grid */}
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {repos.map((repo) => (
             <a 
@@ -72,12 +70,21 @@ const GithubSection = () => {
                 <Book size={20} className="text-blue-600" />
                 <span className="text-xs font-mono text-slate-400">Public</span>
               </div>
+              
               <h3 className="font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors">
                 {repo.name}
               </h3>
-              <p className="text-sm text-slate-600 mb-4 line-clamp-2 flex-grow">
-                {repo.description || "No description available."}
-              </p>
+
+              {/* CHANGE: Only render description if it exists */}
+              {repo.description && (
+                <p className="text-sm text-slate-600 mb-4 line-clamp-2 flex-grow">
+                  {repo.description}
+                </p>
+              )}
+              
+              {/* If no description, we insert a spacer to keep alignment if needed, or let flex-grow handle it */}
+              {!repo.description && <div className="flex-grow"></div>}
+
               <div className="flex items-center gap-4 text-xs text-slate-500 mt-auto pt-4 border-t border-slate-200">
                 {repo.language && (
                   <span className="flex items-center gap-1">
@@ -85,7 +92,6 @@ const GithubSection = () => {
                     {repo.language}
                   </span>
                 )}
-                
               </div>
             </a>
           ))}
