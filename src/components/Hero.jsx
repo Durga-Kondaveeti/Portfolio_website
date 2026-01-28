@@ -9,9 +9,9 @@ const Hero = () => {
   const [loopNum, setLoopNum] = useState(0);
   const [delta, setDelta] = useState(150);
 
-  const toRotate = ["Frontend", "Backend", "Full Stack"];
-  const TYPING_SPEED = 150;
-  const PAUSE_TIME = 2000;
+  const toRotate = ["Frontend", "Backend", "Full-Stack"];
+  const TYPING_SPEED = 100;
+  const PAUSE_TIME = 1200;
 
   useEffect(() => {
     let ticker = setInterval(() => {
@@ -54,7 +54,7 @@ const Hero = () => {
         <div className="absolute bottom-[-10%] right-[20%] w-[600px] h-[600px] bg-slate-50 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob animation-delay-4000"></div>
       </div>
 
-      <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
         
         <motion.div 
           initial={{ opacity: 0, y: 20 }}

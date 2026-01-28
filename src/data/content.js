@@ -85,7 +85,7 @@ export const projects = [
     title: "NLU Code Explainer LLM",
     img: "images/code_explainator.png",
     tech: ["Python", "Llama 2", "QLORA", "PEFT"],
-    desc: "Fine-tuned LLM to generate human-readable code explanations with 20% higher accuracy.",
+    desc: "Fine-tuned LLM to generate human readable code explanations with 20% higher accuracy. Analyze and explain complex code snippets in natural language. Generate better results than Llama 2 baseline.",
     link: "https://github.com/Durga-Kondaveeti",
     type: "AI/ML"
   },
