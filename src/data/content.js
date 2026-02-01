@@ -14,6 +14,7 @@ export const personalInfo = {
   }
 };
 
+
 export const aboutPersonas = {
   recruiter: "Master's student in Computer Engineering at GMU (Exp. May 2026) with professional experience as an SDE at Paytm. Tech stack includes React, Python, Node.js, and AWS. Proven track record of optimizing web performance (reducing load times by ~45%) and designing CI/CD pipelines.",
   manager: "I focus on reliability and scalability. At Paytm, I didn't just write code, I architected reusable component libraries and established Jest testing protocols that reduced regression bugs by 25%. I'm experienced in migrating legacy services to AWS and optimizing backend logic for O(n) performance.",
@@ -78,7 +79,9 @@ export const projects = [
     img: "images/Regex_project.png",
     tech: ["React", "TypeScript", "AST Parsing", "Backtracking Algorithms"],
     desc: "interactive Regex visualization tool using React and TypeScript to simulate recursive backtracking and Depth-First Search (DFS), providing real-time state analysis of pattern matching execution.",
-    link: "https://durga-kondaveeti.github.io/Regex-Time-Travel-Debugger/",
+    link: "https://github.com/Durga-Kondaveeti/Regex-Time-Travel-Debugger",
+    // [cite_start]// 2. ADD THIS NEW LINE FOR THE DEMO BUTTON [cite: 63]
+    demo: "https://durga-kondaveeti.github.io/Regex-Time-Travel-Debugger/",
     type: "Web App"
   },
   {

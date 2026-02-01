@@ -67,6 +67,9 @@ const navLinks = [
           <a href="https://github.com/Durga-Kondaveeti" target="_blank" rel="noreferrer">
             <Github size={20} className="text-primary hover:text-accent transition-colors"/>
           </a>
+          <a href="https://www.linkedin.com/in/kondaveetidurga/" target="_blank" rel="noreferrer">
+            <Linkedin size={20} className="text-primary hover:text-accent transition-colors"/>
+          </a>
         </div>
 
         {/* Mobile Toggle */}
