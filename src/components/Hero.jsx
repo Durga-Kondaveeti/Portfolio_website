@@ -153,12 +153,12 @@ const Hero = () => {
            transition={{ delay: 1, duration: 1 }}
            className="mt-20 pt-10 border-t border-slate-100"
         >
-           <p className="text-sm text-slate-400 font-medium mb-4">POWERED BY</p>
-           <div className="flex justify-center gap-8 grayscale opacity-50">
-              <span className="font-bold text-slate-300">AWS</span>
-              <span className="font-bold text-slate-300">REACT</span>
-              <span className="font-bold text-slate-300">PYTHON</span>
-              <span className="font-bold text-slate-300">NODE.JS</span>
+           <p className="text-sm text-slate-400 font-medium mb-4 ">POWERED BY</p>
+           <div className="flex justify-center gap-8 grayscale">
+              <span className="font-bold text-slate-600">AWS</span>
+              <span className="font-bold text-slate-600">REACT</span>
+              <span className="font-bold text-slate-600">PYTHON</span>
+              <span className="font-bold text-slate-600">NODE.JS</span>
            </div>
         </motion.div>
 
