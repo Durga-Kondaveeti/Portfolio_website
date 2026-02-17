@@ -75,15 +75,15 @@ const Hero = () => {
         <motion.h1 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.1 }}
+          transition={{ duration: 0.3, delay: 0.1 }}
           className="text-5xl md:text-7xl font-bold tracking-tight text-slate-900 mb-6 leading-tight min-h-[160px] md:min-h-[auto]"
         >
-          Hello, I am Durga a <br className="md:hidden" />
+          Hello, I am Durga a <br />
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-indigo-600">
             {text}
           </span>
           <span className="text-slate-400 animate-pulse">|</span>
-          <br /> Developer
+          &nbsp;Developer
         </motion.h1>
 
         {/* Subtitle */}
@@ -94,7 +94,7 @@ const Hero = () => {
           className="text-xl text-slate-600 mb-10 max-w-2xl mx-auto leading-relaxed"
         >
            Turning complex backend logic into seamless user experiences. 
-           Specializing in React, AWS, and Scalable Infrastructure.
+           Specializing in Designing, Deploying, and Scalable Infrastructure.
         </motion.p>
 
         {/* Buttons Section - UPDATED */}
@@ -153,13 +153,13 @@ const Hero = () => {
            transition={{ delay: 1, duration: 1 }}
            className="mt-20 pt-10 border-t border-slate-100"
         >
-           <p className="text-sm text-slate-400 font-medium mb-4 ">POWERED BY</p>
+           {/* <p className="text-sm text-slate-400 font-medium mb-4 ">POWERED BY</p>
            <div className="flex justify-center gap-8 grayscale">
               <span className="font-bold text-slate-600">AWS</span>
               <span className="font-bold text-slate-600">REACT</span>
               <span className="font-bold text-slate-600">PYTHON</span>
               <span className="font-bold text-slate-600">NODE.JS</span>
-           </div>
+           </div> */}
         </motion.div>
 
       </div>
