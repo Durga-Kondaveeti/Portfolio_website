@@ -18,7 +18,7 @@ export const personalInfo = {
 export const aboutPersonas = {
   recruiter: "Master's student in Computer Engineering at GMU (Exp. May 2026) with professional experience as an SDE at Paytm. Tech stack includes React, Python, Node.js, and AWS. Proven track record of optimizing web performance (reducing load times by ~45%) and designing CI/CD pipelines.",
   manager: "I focus on reliability and scalability. At Paytm, I didn't just write code, I architected reusable component libraries and established Jest testing protocols that reduced regression bugs by 25%. I'm experienced in migrating legacy services to AWS and optimizing backend logic for O(n) performance.",
-  client: "I build fast, intuitive digital products. I specialize in turning complex data like Regex patterns or financial transactions into user-friendly interfaces. My goal is to deliver software that works seamlessly, loads instantly, and solves real user problems."
+  client: "I build fast, intuitive digital products. I specialize in turning complex data like Regex patterns or financial transactions into user friendly interfaces. My goal is to deliver software that works seamlessly, loads instantly, and solves real user problems."
 };
 
 export const experience = [
@@ -58,7 +58,7 @@ export const education = [
 ];
 
 export const skills = [
-  { category: "Languages", items: ["Python", "Java", "C++", "JavaScript", "TypeScript", "SQL"] },
+  { category: "Languages", items: ["Python", "Java", "C++", "JavaScript", "TypeScript", "SQL", "Nosql"] },
   { category: "Frontend", items: ["React", "React Native", "Tailwindcss"] },
   { category: "Backend", items: ["Node.js", "Django", "Spring Boot", "GraphQL"] },
   { category: "Cloud/DevOps", items: ["AWS (Lambda, EC2)", "Docker", "Kubernetes", "Terraform", "Jenkins"] }

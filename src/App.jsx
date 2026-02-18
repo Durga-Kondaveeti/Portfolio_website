@@ -53,7 +53,7 @@ function App() {
           <Route path="/blog/:slug" element={<BlogPost />} />
         </Routes>
         <footer className="py-8 text-center text-gray-400 text-sm bg-white border-t border-gray-50">
-          <p>© {new Date().getFullYear()} {personalInfo.name}. Built with React & Vite 👨‍💻</p>
+          {/* <p>© {new Date().getFullYear()} {personalInfo.name}. Built with React & Vite 👨‍💻</p> */}
         </footer>
       </div>
     </Router>
