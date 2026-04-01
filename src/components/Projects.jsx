@@ -5,22 +5,22 @@ import { Github, ExternalLink } from 'lucide-react';
 
 const Projects = () => {
   return (
-    <section id="projects" className="py-32 bg-slate-50">
+    <section id="projects" className="py-32 bg-white relative">
       <div className="max-w-7xl mx-auto px-6">
         
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-16 md:text-center max-w-3xl mx-auto"
+          className="mb-20 md:text-center max-w-3xl mx-auto"
         >
-          <h2 className="text-4xl font-bold text-slate-900 mb-4">Featured Projects</h2>
-          <p className="text-lg text-slate-600">
-            A selection of technical projects focusing on performance, scalability, and developer experience.
+          <h2 className="text-5xl font-black text-primary-950 mb-6 tracking-tight italic">Featured Projects</h2>
+          <p className="text-xl text-primary-500 font-medium leading-relaxed">
+            Technical engineering projects focused on scalability, system architecture, and machine learning.
           </p>
         </motion.div>
 
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((project, index) => (
             <motion.article 
               key={index}
@@ -28,78 +28,70 @@ const Projects = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="group bg-white rounded-2xl overflow-hidden border border-slate-200/60 shadow-sm hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-300 flex flex-col h-full"
+              className="group glass-card rounded-[2.5rem] overflow-hidden flex flex-col h-full hover:-translate-y-2 transition-transform duration-500"
             >
               <a 
                 href={project.demo || project.link}
                 target="_blank" 
                 rel="noopener noreferrer" 
-                // CHANGED: Added 'p-4' padding and 'bg-slate-50' so the image sits nicely inside
-                className="block h-56 bg-slate-50 relative overflow-hidden cursor-pointer p-2"
+                className="block h-64 bg-slate-50 relative overflow-hidden p-6"
               >
-                 
                  <img 
                   src={project.img || `https://placehold.co/600x400/f8fafc/94a3b8?text=${encodeURIComponent(project.title)}`} 
                   alt={project.title}
-                  // CHANGED: 'object-contain' (Fit whole image) instead of 'object-cover' (Crop)
-                  className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-105 z-10"
+                  className="w-full h-full object-contain transition-transform duration-1000 group-hover:scale-110"
                  />
                 
-                {/* Floating Badge */}
-                <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-md text-xs font-bold px-3 py-1.5 rounded-full text-slate-700 shadow-sm z-20 border border-white/50">
+                {/* Floating Type Badge */}
+                <div className="absolute top-6 right-6 bg-white/80 backdrop-blur-xl text-[10px] font-black uppercase tracking-[0.2em] px-4 py-2 rounded-full text-primary-950 shadow-premium border-2 border-primary-100 z-20">
                   {project.type}
                 </div>
               </a>
 
-              <div className="p-8 flex flex-col flex-grow">
+              <div className="p-10 flex flex-col flex-grow">
                 <a 
                    href={project.demo || project.link} 
                    target="_blank" 
                    rel="noopener noreferrer"
-                   className="block"
+                   className="block mb-4"
                 >
-                    <h3 className="text-2xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors">
+                    <h3 className="text-2xl font-black text-primary-950 group-hover:text-accent-600 transition-colors tracking-tight">
                     {project.title}
                     </h3>
                 </a>
 
-                <p className="text-slate-600 leading-relaxed mb-6 flex-grow">
+                <p className="text-primary-600 leading-relaxed mb-8 flex-grow font-medium">
                   {project.desc}
                 </p>
 
-                <div className="flex flex-wrap gap-2 mb-8">
+                <div className="flex flex-wrap gap-2.5 mb-10">
                   {project.tech.map(t => (
-                    <span key={t} className="text-xs font-semibold text-blue-700 bg-blue-50 px-3 py-1 rounded-full border border-blue-100">
+                    <span key={t} className="text-[10px] font-black uppercase tracking-widest text-accent-700 bg-accent-50/80 px-3 py-1.5 rounded-lg border-2 border-accent-100">
                       {t}
                     </span>
                   ))}
                 </div>
 
-               {/* BUTTONS CONTAINER */}
-                <div className="flex items-center gap-6 mt-auto pt-6 border-t border-slate-100">
-                  
-                  {/* Source Code Button (Always Visible) */}
+                <div className="flex items-center gap-8 mt-auto pt-8 border-t border-primary-50">
                   <a 
                     href={project.link} 
                     target="_blank" 
                     rel="noopener noreferrer" 
-                    className="flex items-center text-sm font-semibold text-slate-700 hover:text-blue-600 transition-colors gap-2"
+                    className="flex items-center text-xs font-black uppercase tracking-widest text-primary-400 hover:text-primary-950 transition-colors gap-2.5"
                   >
-                    <Github size={18} /> Source Code
+                    <Github size={18} className="text-accent-500" /> Source
                   </a>
 
-                  {/* Demo Button (Visible ONLY if project.demo exists) */}
                   {project.demo && (
                     <a 
                       href={project.demo} 
                       target="_blank" 
                       rel="noopener noreferrer" 
-                      className="flex items-center text-sm font-semibold text-slate-700 hover:text-blue-600 transition-colors gap-2"
+                      className="flex items-center text-xs font-black uppercase tracking-widest text-primary-400 hover:text-accent-600 transition-colors gap-2.5"
                     >
-                      <ExternalLink size={18} /> Live Demo
+                      <ExternalLink size={18} className="text-accent-500" /> Live Demo
                     </a>
                   )}
-
                 </div>
               </div>
             </motion.article>

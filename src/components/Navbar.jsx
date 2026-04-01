@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Menu, X, Github, Linkedin } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -44,54 +45,61 @@ const navLinks = [
   };
 
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-300 ${
-      scrolled ? 'bg-white/90 backdrop-blur-md shadow-sm py-4' : 'bg-transparent py-6'
+    <nav className={`fixed w-full z-50 transition-all duration-500 ${
+      scrolled ? 'bg-white/70 backdrop-blur-xl border-b-2 border-primary-100 shadow-premium py-4' : 'bg-transparent py-6'
     }`}>
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
-        <Link to="/" className="text-2xl font-bold text-primary tracking-tighter">
-          DK
+        <Link to="/" className="text-3xl font-black text-primary-950 tracking-tighter hover:text-accent-600 transition-colors">
+          DK<span className="text-accent-500">.</span>
         </Link>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex items-center space-x-8">
+        <div className="hidden md:flex items-center space-x-10">
           {navLinks.map((link) => (
             <a 
               key={link.name} 
               href={link.href} 
               onClick={(e) => handleNavClick(e, link.href)}
-              className="text-sm font-medium text-secondary hover:text-accent transition-colors"
+              className="text-sm font-bold text-primary-600 hover:text-accent-600 transition-all relative group"
             >
               {link.name}
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent-500 transition-all group-hover:w-full"></span>
             </a>
           ))}
-          <a href="https://github.com/Durga-Kondaveeti" target="_blank" rel="noreferrer">
-            <Github size={20} className="text-primary hover:text-accent transition-colors"/>
-          </a>
-          <a href="https://www.linkedin.com/in/kondaveetidurga/" target="_blank" rel="noreferrer">
-            <Linkedin size={20} className="text-primary hover:text-accent transition-colors"/>
-          </a>
+          <div className="flex items-center gap-5 pl-4 border-l-2 border-primary-100">
+            <a href="https://github.com/Durga-Kondaveeti" target="_blank" rel="noreferrer" className="text-primary-400 hover:text-primary-950 transition-colors">
+              <Github size={20} />
+            </a>
+            <a href="https://www.linkedin.com/in/kondaveetidurga/" target="_blank" rel="noreferrer" className="text-primary-400 hover:text-accent-600 transition-colors">
+              <Linkedin size={20} />
+            </a>
+          </div>
         </div>
 
         {/* Mobile Toggle */}
-        <button onClick={() => setIsOpen(!isOpen)} className="md:hidden text-primary">
+        <button onClick={() => setIsOpen(!isOpen)} className="md:hidden p-2 text-primary-950 bg-primary-50 rounded-xl border-2 border-primary-100">
           {isOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden absolute top-full left-0 w-full bg-white border-b border-gray-100 py-4 px-6 flex flex-col space-y-4 shadow-lg">
+        <motion.div 
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="md:hidden absolute top-full left-0 w-full bg-white/95 backdrop-blur-lg border-b-2 border-primary-100 py-8 px-6 flex flex-col space-y-6 shadow-2xl"
+        >
           {navLinks.map((link) => (
             <a 
               key={link.name} 
               href={link.href}
               onClick={(e) => handleNavClick(e, link.href)}
-              className="text-secondary hover:text-accent font-medium"
+              className="text-lg font-bold text-primary-800 hover:text-accent-600"
             >
               {link.name}
             </a>
           ))}
-        </div>
+        </motion.div>
       )}
     </nav>
   );

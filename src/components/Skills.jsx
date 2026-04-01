@@ -14,16 +14,16 @@ const Skills = () => {
   };
 
   return (
-    <section id="skills" className="py-20 bg-gray-50">
-      <div className="max-w-6xl mx-auto px-6">
+    <section id="skills" className="py-32 bg-slate-50 relative overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-12 text-center"
+          className="mb-20 text-center"
         >
-          <h2 className="text-3xl font-bold text-primary">Technical Toolkit</h2>
-          <p className="text-secondary mt-2">Technologies I work with daily.</p>
+          <h2 className="text-5xl font-black text-primary-950 tracking-tight italic">Technical Expertise</h2>
+          <p className="text-primary-500 mt-4 text-xl font-medium italic">A versatile toolkit for solving complex engineering challenges.</p>
         </motion.div>
 
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
@@ -34,17 +34,17 @@ const Skills = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow border border-gray-100"
+              className="glass-card p-10 rounded-[2.5rem] group hover:border-accent-200/50"
             >
-              <div className="text-accent mb-4">
+              <div className="text-accent-600 mb-8 p-4 bg-accent-50 rounded-2xl inline-block group-hover:bg-accent-600 group-hover:text-white border-2 border-accent-100 transition-all duration-500">
                 {getIcon(skillGroup.category)}
               </div>
-              <h3 className="text-lg font-bold text-primary mb-4">{skillGroup.category}</h3>
-              <div className="flex flex-wrap gap-2">
+              <h3 className="text-xl font-black text-primary-950 mb-6 tracking-tight">{skillGroup.category}</h3>
+              <div className="flex flex-wrap gap-3">
                 {skillGroup.items.map((item) => (
                   <span 
                     key={item} 
-                    className="px-3 py-1 bg-slate-50 text-slate-600 text-sm font-medium rounded-md border border-slate-100"
+                    className="px-4 py-2 bg-white text-primary-600 text-xs font-black uppercase tracking-widest rounded-xl border-2 border-primary-100 shadow-premium group-hover:border-accent-100 transition-colors"
                   >
                     {item}
                   </span>

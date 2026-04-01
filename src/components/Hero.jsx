@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowDown, FileText, Linkedin, BookOpen } from 'lucide-react'; // Added ArrowDown
-
-// Ensure this path is correct
 import resumePDF from '../resume/Durga_Resume.pdf'; 
 
 const Hero = () => {
@@ -52,70 +50,69 @@ const Hero = () => {
       
       {/* Background Decor */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0 pointer-events-none">
-        <div className="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] bg-blue-50 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob"></div>
-        <div className="absolute top-[20%] left-[-10%] w-[400px] h-[400px] bg-indigo-50 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob animation-delay-2000"></div>
-        <div className="absolute bottom-[-10%] right-[20%] w-[600px] h-[600px] bg-slate-50 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob animation-delay-4000"></div>
+        <div className="blob-glow top-[-10%] right-[-5%] w-[600px] h-[600px] bg-blue-100"></div>
+        <div className="blob-glow top-[20%] left-[-10%] w-[500px] h-[500px] bg-indigo-100 animation-delay-2000"></div>
+        <div className="blob-glow bottom-[-10%] right-[20%] w-[700px] h-[700px] bg-slate-100 animation-delay-4000"></div>
       </div>
 
       <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
         
         {/* Status Badge */}
         <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
-          className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 text-blue-600 text-sm font-medium mb-8 border border-blue-100"
+          className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-white/50 backdrop-blur-md text-accent-700 text-sm font-bold mb-8 border-2 border-primary-100 shadow-premium"
         >
-          <span className="relative flex h-2 w-2">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
-            <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+          <span className="relative flex h-2.5 w-2.5">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+            <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-500"></span>
           </span>
-          Open to Opportunities
+          Currently seeking Fall 2026 SDE Roles
         </motion.div>
 
         {/* Title */}
         <motion.h1 
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.1 }}
-          className="text-5xl md:text-7xl font-bold tracking-tight text-slate-900 mb-6 leading-tight min-h-[160px] md:min-h-[auto]"
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="text-6xl md:text-8xl font-black tracking-tighter text-primary-950 mb-8 leading-[1.1] min-h-[180px] md:min-h-[auto]"
         >
-          Hello, I am Durga a <br />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-indigo-600">
+          Durga Kondaveeti <br />
+          <span className="text-gradient">
             {text}
           </span>
-          <span className="text-slate-400 animate-pulse">|</span>
-          &nbsp;Developer
+          <span className="text-accent-300 animate-pulse">_</span>
         </motion.h1>
 
         {/* Subtitle */}
         <motion.p 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-          className="text-xl text-slate-600 mb-10 max-w-2xl mx-auto leading-relaxed"
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="text-xl text-primary-500 mb-12 max-w-3xl mx-auto leading-relaxed font-medium"
         >
-           Turning complex backend logic into seamless user experiences. 
-           Specializing in React, AWS, and Scalable Infrastructure.
+           Computer Engineering Master's Student at <span className="text-primary-900 font-bold">George Mason University</span>. 
+           Former SDE at <span className="text-accent-600 font-bold">Paytm</span> with a passion for building scalable, high-performance systems.
         </motion.p>
 
-        {/* Buttons Section - REORGANIZED */}
+        {/* Buttons Section */}
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-          className="flex flex-col items-center gap-6"
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className="flex flex-col items-center gap-8"
         >
           {/* ROW 1: Primary Actions */}
-          <div className="flex flex-wrap items-center justify-center gap-4">
+          <div className="flex flex-wrap items-center justify-center gap-5">
             
             {/* View Work Button */}
             <a 
               href="#projects" 
-              className="group px-6 py-3 bg-slate-900 text-white rounded-full font-medium hover:bg-slate-800 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5 flex items-center gap-2"
+              className="group px-8 py-4 bg-primary-950 text-white rounded-2xl font-bold hover:bg-primary-800 transition-all shadow-premium hover:shadow-premium-hover hover:-translate-y-1 flex items-center gap-3"
             >
-              View Work
-              <ArrowDown size={18} className="text-slate-300 group-hover:text-white group-hover:animate-bounce" />
+              Explore Projects
+              <ArrowDown size={20} className="text-accent-400 group-hover:text-white group-hover:animate-bounce" />
             </a>
 
             {/* Resume Button */}
@@ -123,36 +120,36 @@ const Hero = () => {
               href={resumePDF} 
               target="_blank" 
               rel="noopener noreferrer"
-              className="group px-6 py-3 bg-white text-slate-900 border border-slate-200 rounded-full font-medium hover:border-slate-800 hover:bg-slate-50 transition-all flex items-center gap-2"
+              className="group px-8 py-4 glass-card text-primary-900 rounded-2xl font-bold hover:bg-white transition-all flex items-center gap-3"
             >
-              <FileText size={18} />
-              Resume
+              <FileText size={20} className="text-accent-600" />
+              Download Resume
             </a>
           </div>
 
-          {/* ROW 2: Secondary Links */}
-          <div className="flex flex-wrap items-center justify-center gap-6">
+          {/* ROW 2: Social Links */}
+          <div className="flex flex-wrap items-center justify-center gap-8">
             
             {/* LinkedIn */}
             <a 
               href="https://www.linkedin.com/in/kondaveetidurga/" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="text-slate-500 hover:text-blue-600 font-medium flex items-center gap-2 transition-colors"
+              className="text-primary-400 hover:text-accent-600 font-bold flex items-center gap-2.5 transition-colors group"
             >
-              <Linkedin size={18} />
+              <Linkedin size={20} className="group-hover:scale-110 transition-transform" />
               LinkedIn
             </a>
 
-            {/* Blog */}
+            {/* GitHub */}
             <a 
-              href="YOUR_MEDIUM_URL_HERE" 
+              href="https://github.com/Durga-Kondaveeti" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="text-slate-500 hover:text-slate-900 font-medium flex items-center gap-2 transition-colors"
+              className="text-primary-400 hover:text-primary-950 font-bold flex items-center gap-2.5 transition-colors group"
             >
-              <BookOpen size={18} />
-              Blog
+              <FileText size={20} className="group-hover:scale-110 transition-transform" />
+              GitHub
             </a>
           </div>
 
