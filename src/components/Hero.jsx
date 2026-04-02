@@ -76,14 +76,15 @@ const Hero = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="text-6xl md:text-8xl font-black tracking-tighter text-primary-950 mb-8 leading-[1.1] min-h-[180px] md:min-h-[auto]"
+          className="text-6xl md:text-8xl font-black tracking-tighter text-primary-950 mb-8 leading-[1.1] min-h-[220px] md:min-h-[auto]"
         >
           Durga Kondaveeti <br />
           <span className="text-gradient">
             {text}
           </span>
           <span className="text-accent-300 animate-pulse">_</span>
-          &nbsp;Developer
+          <br />
+          Developer
         </motion.h1>
 
         {/* Subtitle */}
@@ -94,7 +95,7 @@ const Hero = () => {
           className="text-xl text-primary-500 mb-12 max-w-3xl mx-auto leading-relaxed font-medium"
         >
            Architecting high-performance systems and AI-driven solutions. 
-           Master's in Computer Science candidate at <span className="text-primary-900 font-bold">George Mason University</span> with a proven record of engineering enterprise-scale cloud infrastructure.
+           M.S. in Computer Science at <span className="text-primary-900 font-bold">George Mason University</span> with a proven record of engineering enterprise-scale cloud infrastructure.
         </motion.p>
 
         {/* Buttons Section */}
