@@ -92,8 +92,8 @@ const Hero = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-xl text-primary-500 mb-12 max-w-3xl mx-auto leading-relaxed font-medium"
         >
-           Computer Engineering Master's Student at <span className="text-primary-900 font-bold">George Mason University</span>. 
-           Former SDE at <span className="text-accent-600 font-bold">Paytm</span> with a passion for building scalable, high-performance systems.
+           Computer Science Master's Student at <span className="text-primary-900 font-bold">George Mason University</span>. 
+           Former Full Stack Developer at <span className="text-accent-600 font-bold">SDM Industries</span> with a passion for building high-performance AI systems.
         </motion.p>
 
         {/* Buttons Section */}
