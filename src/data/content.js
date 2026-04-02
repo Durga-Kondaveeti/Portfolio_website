@@ -88,7 +88,7 @@ export const projects = [
     img: "images/code_explainator.png",
     tech: ["Python", "Llama 2", "QLORA", "PEFT"],
     desc: "Fine-tuned Llama 2 using QLoRA and AST-based feature extraction to generate human-readable code explanations, improving semantic accuracy by 20% over base benchmarks.",
-    link: "https://github.com/Durga-Kondaveeti",
+    link: "https://github.com/Durga-Kondaveeti/Llama-based-code-explainer-LLM",
     type: "AI/ML"
   },
   {
@@ -96,7 +96,7 @@ export const projects = [
     img: "images/CLIP_Image_sort.png",
     tech: ["PyTorch", "ViT-B/32", "Mask R-CNN"],
     desc: "Implemented text-to-image retrieval and zero-shot classification utilizing cosine ranking and OOD abstention mechanisms, achieving Recall@1=0.91 on CIFAR-10.",
-    link: "https://github.com/Durga-Kondaveeti",
+    link: "https://github.com/Durga-Kondaveeti/image-scene-recognition-sift",
     type: "Computer Vision"
   }
 ];

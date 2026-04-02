@@ -20,6 +20,7 @@ const GithubSection = () => {
           'Inventory_Manager',
           'Job-tracker',
           'Regex-Time-Travel-Debugger',
+          'Llama-based-code-explainer-LLM',
           'image-scene-recognition-sift',
           'Crypto-trading-bot',
           'Synapse-Fitness'
