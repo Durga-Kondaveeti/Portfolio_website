@@ -9,7 +9,7 @@ const Hero = () => {
   const [loopNum, setLoopNum] = useState(0);
   const [delta, setDelta] = useState(150);
 
-  const toRotate = ["Frontend", "Backend", "Full Stack"];
+  const toRotate = ["Frontend", "Backend", "Full -stack"];
   const TYPING_SPEED = 150;
   const PAUSE_TIME = 2000;
 
@@ -83,6 +83,7 @@ const Hero = () => {
             {text}
           </span>
           <span className="text-accent-300 animate-pulse">_</span>
+          &nbsp;Developer
         </motion.h1>
 
         {/* Subtitle */}
@@ -92,8 +93,8 @@ const Hero = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-xl text-primary-500 mb-12 max-w-3xl mx-auto leading-relaxed font-medium"
         >
-           Computer Science Master's Student at <span className="text-primary-900 font-bold">George Mason University</span>. 
-           Former Full Stack Developer at <span className="text-accent-600 font-bold">SDM Industries</span> with a passion for building high-performance AI systems.
+           Architecting high-performance systems and AI-driven solutions. 
+           Master's in Computer Science candidate at <span className="text-primary-900 font-bold">George Mason University</span> with a proven record of engineering enterprise-scale cloud infrastructure.
         </motion.p>
 
         {/* Buttons Section */}
