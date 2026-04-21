@@ -15,29 +15,37 @@ const GithubSection = () => {
         const userRes = await fetch(`https://api.github.com/users/${username}`);
         const userData = await userRes.json();
         
-        // List of specific repositories to feature
-        const repoNames = [
-          'Inventory_Manager',
+        // Fetch all public repos sorted by last updated
+        const reposRes = await fetch(`https://api.github.com/users/${username}/repos?sort=updated&per_page=50`);
+        const reposData = await reposRes.json();
+        
+        // Repositories to ignore (featured projects or administrative/practice repos)
+        const ignoredRepoNames = [
           'Job-tracker',
           'Regex-Time-Travel-Debugger',
           'Llama-based-code-explainer-LLM',
           'image-scene-recognition-sift',
-          'Crypto-trading-bot',
-          'Synapse-Fitness'
+          'Portfolio_website',
+          'Durga-Kondaveeti',
+          'CRM',
+          'LeetCode-Answers'
         ];
 
-        // Fetch each repository's data individually to ensure we get exactly these
-        const repoPromises = repoNames.map(name => 
-          fetch(`https://api.github.com/repos/${username}/${name}`).then(res => res.json())
-        );
-        
-        const reposData = await Promise.all(repoPromises);
-        
-        // Filter out any that failed to load (e.g., if a name is wrong)
-        const validRepos = reposData.filter(repo => repo.id);
+        // Filter out forks and ignored projects (case-insensitive check)
+        const filteredRepos = Array.isArray(reposData) 
+          ? reposData
+              .filter(repo => {
+                const isFork = repo.fork;
+                const isIgnored = ignoredRepoNames.some(ignoredName => 
+                  ignoredName.toLowerCase() === repo.name.toLowerCase()
+                );
+                return !isFork && !isIgnored;
+              })
+              .slice(0, 9)
+          : [];
 
         setStats(userData);
-        setRepos(validRepos);
+        setRepos(filteredRepos);
       } catch (error) {
         console.error("GitHub Fetch Error:", error);
       }
