@@ -12,6 +12,7 @@ import GithubSection from './components/GithubSection';
 import BlogList from './components/BlogList';
 import BlogPost from './components/BlogPost';
 import Contact from './components/Contact';
+import AdminTraffic from './components/AdminTraffic';
 import { personalInfo } from './data/content';
 
 // --- HOME COMPONENT ---
@@ -49,6 +50,8 @@ function App() {
           {/* This matches the root path / */}
           <Route path="/" element={<Home />} />
           
+          <Route path="/aadmin" element={<AdminTraffic />} />
+
           {/* OPTIONAL: Add this 'catch-all' route to prevent blank pages if a URL is wrong */}
           <Route path="*" element={<Home />} />
 
