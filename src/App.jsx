@@ -5,6 +5,7 @@ import Hero from './components/Hero'; // <--- This was missing!
 import About from './components/About';
 import Experience from './components/Experience';
 import Projects from './components/Projects';
+import AIAgents from './components/AIAgents';
 import Skills from './components/Skills';
 import Education from './components/Education';
 import GithubSection from './components/GithubSection';
@@ -19,6 +20,7 @@ const Home = () => (
     <Hero />
     <About />
     <Projects />
+    <AIAgents />
     <Experience />
     <Skills />
     <Education />

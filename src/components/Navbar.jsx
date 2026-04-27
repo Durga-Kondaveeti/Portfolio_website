@@ -20,6 +20,7 @@ const Navbar = () => {
 const navLinks = [
   { name: 'About', href: '#about' },
   { name: 'Spotlight', href: '#projects' }, // Renamed to match your request
+  { name: 'AI & Agents', href: '#ai-agents' },
   { name: 'Experience', href: '#experience' },
   { name: 'Skills', href: '#skills' },
   { name: 'Blog', href: '#blog-preview' }, // Scrolls to the blog section on home
